@@ -16,8 +16,8 @@
 
         /* Main section styles */
         .container { max-width: 1200px; margin: auto; padding: 20px; }
-        .intro, .resume, .features, .cta { display: none; }
-        .intro.active, .resume.active, .features.active, .cta.active { display: block; }
+        .intro, .resume, .features, .intro { display: none; }
+        .intro.active, .resume.active, .features.active, .intro.active { display: block; }
 
         .intro { text-align: center; margin-top: 40px; }
         .intro h2 { font-size: 2em; color: #0066cc; margin-bottom: 10px; }
@@ -30,9 +30,9 @@
         .feature p { color: #666; }
 
         /* Call to action */
-        .cta { text-align: center; margin: 40px 0; }
-        .cta button { padding: 15px 30px; font-size: 1.2em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
-        .cta button:hover { background-color: #004a99; }
+        .intro { text-align: center; margin: 40px 0; }
+        .intro button { padding: 15px 30px; font-size: 1.2em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+        .intro button:hover { background-color: #004a99; }
 
         /* Resume Section */
         .resume-content { text-align: center; color: #0066cc; font-size: 1.2em; margin-top: 20px; }
@@ -57,7 +57,6 @@
     <div class="nav">
         <button onclick="showSection('intro')">Home</button>
         <button onclick="showSection('resume')">Resume</button>
-        <button onclick="showSection('cta')">Download</button>
     </div>
 
     <div class="container">
@@ -82,8 +81,9 @@
         </section>
 
         <section class="resume">
-            <h2>Resume</h2>
+            <h2>about me</h2>
             <div class="resume-content">
+                <P> About 3 years ago I decided to be a programmer after 9 months I found that I loved Linux too much so I decided to work in a web hosting company and I learned a lot about everything such as developing an app on cross-platform like Linux and windows and also I learned about network professionally so this program made by me to do something for opensource community </P>
                 <ul>
                     <li>LPIC1</li>
                     <li>LPIC2</li>
@@ -99,7 +99,7 @@
             </div>
         </section>
 
-        <section class="cta">
+        <section class="intro">
             <p>Ready to experience the future of remote management?</p>
             <button onclick="downloadClient()">Download Client Version</button>
             <button onclick="downloadServer()">Download Server Version</button>
