@@ -64,19 +64,24 @@
 
         <section class="cta">
             <p>Ready to experience the future of remote management?</p>
-            <button onclick="downloadApp()">Download GlobeConnect</button>
+                <button onclick="downloadClient()">Download Client Version</button>
+                <button onclick="downloadServer()">Download Server Version</button>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2024 GlobeConnect. All rights reserved.</p>
     </footer>
-
-    <script>
-        function downloadApp() {
-            alert("Thank you for your interest! The download link will be available soon.");
-            // Code to redirect to download link can be added here.
-        }
-    </script>
+<script>
+    function downloadClient() {
+        alert("Thank you for your interest! The download link will be available soon.");
+        window.location.href = 'https://your-download-link-for-client';
+    }
+    function downloadServer() {
+        alert("Thank you for your interest! The download link will be available soon.");
+        window.location.href = 'https://your-download-link-for-server';
+    }
+</script>
+    
 </body>
 </html>
