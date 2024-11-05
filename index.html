@@ -16,6 +16,9 @@
 
         /* Main section styles */
         .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .intro, .resume, .features, .cta { display: none; }
+        .intro.active, .resume.active, .features.active, .cta.active { display: block; }
+
         .intro { text-align: center; margin-top: 40px; }
         .intro h2 { font-size: 2em; color: #0066cc; margin-bottom: 10px; }
         .intro p { font-size: 1.1em; color: #555; }
@@ -31,6 +34,16 @@
         .cta button { padding: 15px 30px; font-size: 1.2em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
         .cta button:hover { background-color: #004a99; }
 
+        /* Resume Section */
+        .resume-content { text-align: center; color: #0066cc; font-size: 1.2em; margin-top: 20px; }
+        .resume-content ul { list-style: none; padding: 0; }
+        .resume-content li { margin: 8px 0; color: #555; }
+
+        /* Navigation */
+        .nav { text-align: center; margin: 20px; }
+        .nav button { margin: 0 10px; padding: 10px 20px; font-size: 1em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .nav button:hover { background-color: #004a99; }
+
         /* Footer */
         footer { text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 50px; }
     </style>
@@ -41,13 +54,19 @@
         <p>Your Free Global Solution for Remote Management</p>
     </header>
 
+    <div class="nav">
+        <button onclick="showSection('intro')">Home</button>
+        <button onclick="showSection('resume')">Resume</button>
+        <button onclick="showSection('cta')">Download</button>
+    </div>
+
     <div class="container">
-        <section class="intro">
+        <section class="intro active">
             <h2>Effortless Connections, Anytime, Anywhere</h2>
             <p>GlobeConnect is designed to help you manage your servers and devices remotely with ease and efficiency. Completely free and made for everyone!</p>
         </section>
 
-        <section class="features">
+        <section class="features active">
             <div class="feature">
                 <h3>Cross-Platform Access</h3>
                 <p>Access your servers on Linux, Windows, and more with seamless integration.</p>
@@ -62,26 +81,50 @@
             </div>
         </section>
 
+        <section class="resume">
+            <h2>Resume</h2>
+            <div class="resume-content">
+                <ul>
+                    <li>LPIC1</li>
+                    <li>LPIC2</li>
+                    <li>MCSA</li>
+                    <li>CCNA</li>
+                    <li>MTCNA</li>
+                    <li>Network+</li>
+                    <li>Rust</li>
+                    <li>C++</li>
+                    <li>Web Programming (PHP, JavaScript, HTML, CSS)</li>
+                    <li>Virtualization (VMware)</li>
+                </ul>
+            </div>
+        </section>
+
         <section class="cta">
             <p>Ready to experience the future of remote management?</p>
-                <button onclick="downloadClient()">Download Client Version</button>
-                <button onclick="downloadServer()">Download Server Version</button>
+            <button onclick="downloadClient()">Download Client Version</button>
+            <button onclick="downloadServer()">Download Server Version</button>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2024 GlobeConnect. All rights reserved.</p>
     </footer>
-<script>
-    function downloadClient() {
-        alert("Thank you for your interest! The download link will be available soon.");
-        window.location.href = 'https://your-download-link-for-client';
-    }
-    function downloadServer() {
-        alert("Thank you for your interest! The download link will be available soon.");
-        window.location.href = 'https://your-download-link-for-server';
-    }
-</script>
-    
+
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.container > section').forEach(sec => sec.classList.remove('active'));
+            document.querySelector(`.${section}`).classList.add('active');
+        }
+
+        function downloadClient() {
+            alert("Thank you for your interest! The download link will be available soon.");
+            window.location.href = 'https://make-it-open.ir/';
+        }
+
+        function downloadServer() {
+            alert("Thank you for your interest! The download link will be available soon.");
+            window.location.href = 'https://make-it-open.ir/';
+        }
+    </script>
 </body>
 </html>
