@@ -3,48 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobeConnect - The Future of Remote Management</title>
+    <title>GlobeConnect - Professional Remote Management</title>
     <style>
-        /* Reset and base styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; color: #333; background-color: #f4f4f4; }
-
-        /* Header styles */
         header { background-color: #0066cc; color: white; padding: 20px; text-align: center; }
         header h1 { font-size: 2.5em; }
         header p { font-size: 1.2em; margin-top: 10px; }
-
-        /* Main section styles */
         .container { max-width: 1200px; margin: auto; padding: 20px; }
-        .intro, .resume, .features, .cta { display: none; }
-        .intro.active, .resume.active, .features.active, .cta.active { display: block; }
-
+        .intro, .resume { display: none; }
+        .intro.active, .resume.active { display: block; }
         .intro { text-align: center; margin-top: 40px; }
         .intro h2 { font-size: 2em; color: #0066cc; margin-bottom: 10px; }
         .intro p { font-size: 1.1em; color: #555; }
-
-        /* Features section */
-        .features { display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 40px; }
-        .feature { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px; flex: 1 1 300px; max-width: 30%; text-align: center; }
-        .feature h3 { color: #0066cc; margin-bottom: 10px; }
-        .feature p { color: #666; }
-
-        /* Call to action */
-        .cta { text-align: center; margin: 40px 0; }
-        .cta button { padding: 15px 30px; font-size: 1.2em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
-        .cta button:hover { background-color: #004a99; }
-
-        /* Resume Section */
-        .resume-content { text-align: center; color: #0066cc; font-size: 1.2em; margin-top: 20px; }
-        .resume-content ul { list-style: none; padding: 0; }
-        .resume-content li { margin: 8px 0; color: #555; }
-
-        /* Navigation */
+        .resume-content { text-align: left; margin-top: 20px; color: #333; font-size: 1.1em; }
+        .resume-content ul { list-style: none; padding: 0; margin-left: 20px; }
+        .resume-content li { margin: 12px 0; color: #555; }
+        .resume-content h3 { color: #0066cc; margin-bottom: 10px; }
         .nav { text-align: center; margin: 20px; }
         .nav button { margin: 0 10px; padding: 10px 20px; font-size: 1em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
         .nav button:hover { background-color: #004a99; }
-
-        /* Footer */
         footer { text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 50px; }
     </style>
 </head>
@@ -57,56 +35,42 @@
     <div class="nav">
         <button onclick="showSection('intro')">Home</button>
         <button onclick="showSection('resume')">Resume</button>
-        <button onclick="showSection('cta')">Download</button>
     </div>
 
     <div class="container">
         <section class="intro active">
             <h2>Effortless Connections, Anytime, Anywhere</h2>
             <p>GlobeConnect is designed to help you manage your servers and devices remotely with ease and efficiency. Completely free and made for everyone!</p>
-        </section>
-
-        <section class="features active">
-            <div class="feature">
-                <h3>Cross-Platform Access</h3>
-                <p>Access your servers on Linux, Windows, and more with seamless integration.</p>
+            <div class="cta" style="text-align: center; margin-top: 20px;">
+                <button onclick="downloadClient()">Download Client Version</button>
+                <button onclick="downloadServer()">Download Server Version</button>
             </div>
-            <div class="feature">
-                <h3>High Security</h3>
-                <p>Built with top-notch security standards to protect your data and privacy.</p>
-            </div>
-            <div class="feature">
-                <h3>Easy Setup</h3>
-                <p>Get started quickly with a user-friendly interface and simple configuration.</p>
-            </div>
-        </section>
-         <section class="cta">
-            <p>Ready to experience the future of remote management?</p>
-            <button onclick="downloadClient()">Download Client Version</button>
-            <button onclick="downloadServer()">Download Server Version</button>
         </section>
 
         <section class="resume">
-            <h2>Resume</h2>
+            <h2>Professional Resume</h2>
             <div class="resume-content">
-                <P> About 3 years ago I decided to be a programmer after 9 months I found that I loved Linux too much so I decided to work in a web hosting company and I learned a lot about everything such as developing an app on cross-platform like Linux and windows and also I learned about network professionally so this program made by me to do something for opensource community </P>
-             
+                <h3>Certifications & Technical Skills</h3>
                 <ul>
-                    <li>LPIC1</li>
-                    <li>LPIC2</li>
-                    <li>MCSA</li>
-                    <li>CCNA</li>
-                    <li>MTCNA</li>
-                    <li>Network+</li>
-                    <li>Rust</li>
-                    <li>C++</li>
-                    <li>Web Programming (PHP, JavaScript, HTML, CSS)</li>
-                    <li>Virtualization (VMware)</li>
+                    <li><strong>LPIC1 & LPIC2:</strong> Solid foundation in Linux systems administration, crucial for backend development and server management.</li>
+                    <li><strong>MCSA:</strong> Proficiency in Windows Server environments, ensuring seamless integration with cross-platform projects.</li>
+                    <li><strong>CCNA & Network+:</strong> Strong networking fundamentals to optimize secure and efficient network communication.</li>
+                    <li><strong>MTCNA:</strong> Specialized knowledge in MikroTik routing and network solutions.</li>
+                    <li><strong>Rust:</strong> Mastery of Rust for developing safe and high-performance system applications.</li>
+                    <li><strong>C++:</strong> Expert-level C++ skills for low-level programming and resource-intensive application development.</li>
+                    <li><strong>Web Programming (PHP, JavaScript, HTML, CSS):</strong> Full-stack capabilities to design dynamic, responsive user interfaces and backend functionality.</li>
+                    <li><strong>Virtualization (VMware):</strong> Skilled in VMware solutions, essential for creating, testing, and deploying virtualized environments.</li>
+                    <li><strong>Git:</strong> Version control expertise for collaborative development and code management.</li>
+                    <li><strong>SQL Databases:</strong> Proficiency in SQL (MSSQL & MySQL) to handle large data sets and ensure data integrity in applications.</li>
+                    <li><strong>Security Practices:</strong> Familiarity with security protocols, encryption, and secure coding standards for protecting data and system integrity.</li>
+                </ul>
+                <h3>Project Experience</h3>
+                <ul>
+                    <li><strong>Remote Management Solution:</strong> Developed GlobeConnect, a cross-platform remote management tool with secure, high-speed connections for Windows and Linux servers.</li>
+                    <li><strong>Solo Development Experience:</strong> Designed and implemented projects independently, demonstrating full project lifecycle management skills.</li>
                 </ul>
             </div>
         </section>
-
-       
     </div>
 
     <footer>
@@ -120,13 +84,11 @@
         }
 
         function downloadClient() {
-            alert("Thank you for your interest! The download link will be available soon.");
-            window.location.href = 'https://make-it-open.ir/';
+            window.location.href = 'https://your-download-link-for-client';
         }
 
         function downloadServer() {
-            alert("Thank you for your interest! The download link will be available soon.");
-            window.location.href = 'https://make-it-open.ir/';
+            window.location.href = 'https://your-download-link-for-server';
         }
     </script>
 </body>
