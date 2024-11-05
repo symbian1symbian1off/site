@@ -16,6 +16,11 @@
         .intro { text-align: center; margin-top: 40px; }
         .intro h2 { font-size: 2em; color: #0066cc; margin-bottom: 10px; }
         .intro p { font-size: 1.1em; color: #555; }
+        /* Features section */
+        .features { display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 40px; }
+        .feature { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px; flex: 1 1 300px; max-width: 30%; text-align: center; }
+        .feature h3 { color: #0066cc; margin-bottom: 10px; }
+        .feature p { color: #666; }
         .resume-content { text-align: left; margin-top: 20px; color: #333; font-size: 1.1em; }
         .resume-content ul { list-style: none; padding: 0; margin-left: 20px; }
         .resume-content li { margin: 12px 0; color: #555; }
@@ -23,6 +28,12 @@
         .nav { text-align: center; margin: 20px; }
         .nav button { margin: 0 10px; padding: 10px 20px; font-size: 1em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
         .nav button:hover { background-color: #004a99; }
+
+          /* Call to action */
+        .cta { text-align: center; margin: 40px 0; }
+        .cta button { padding: 15px 30px; font-size: 1.2em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+        .cta button:hover { background-color: #004a99; }
+        
         footer { text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 50px; }
     </style>
 </head>
@@ -40,7 +51,21 @@
     <div class="container">
         <section class="intro active">
             <h2>Effortless Connections, Anytime, Anywhere</h2>
-            <p>GlobeConnect is designed to help you manage your servers and devices remotely with ease and efficiency. Completely free and made for everyone!</p>
+            <p>GlobeConnect is designed to help you manage your servers and devices remotely with ease and efficiency. Completely free and made for everyone!</p
+            <section class="features active">
+                <div class="feature">
+                <h3>Cross-Platform Access</h3>
+                <p>Access your servers on Linux, Windows, and more with seamless integration.</p>
+            </div>
+            <div class="feature">
+                <h3>High Security</h3>
+                <p>Built with top-notch security standards to protect your data and privacy.</p>
+            </div>
+            <div class="feature">
+                <h3>Easy Setup</h3>
+                <p>Get started quickly with a user-friendly interface and simple configuration.</p>
+            </div>
+        </section>
             <div class="cta" style="text-align: center; margin-top: 20px;">
                 <button onclick="downloadClient()">Download Client Version</button>
                 <button onclick="downloadServer()">Download Server Version</button>
