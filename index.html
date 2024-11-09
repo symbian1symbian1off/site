@@ -3,38 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobeConnect - Professional Remote Management</title>
+    <title>GlobeConnect - The Future of Remote Management</title>
     <style>
+        /* Reset and base styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; color: #333; background-color: #f4f4f4; }
+
+        /* Header styles */
         header { background-color: #0066cc; color: white; padding: 20px; text-align: center; }
         header h1 { font-size: 2.5em; }
         header p { font-size: 1.2em; margin-top: 10px; }
+
+        /* Main section styles */
         .container { max-width: 1200px; margin: auto; padding: 20px; }
-        .intro, .resume { display: none; }
-        .intro.active, .resume.active { display: block; }
         .intro { text-align: center; margin-top: 40px; }
         .intro h2 { font-size: 2em; color: #0066cc; margin-bottom: 10px; }
         .intro p { font-size: 1.1em; color: #555; }
+
         /* Features section */
         .features { display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 40px; }
         .feature { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px; flex: 1 1 300px; max-width: 30%; text-align: center; }
         .feature h3 { color: #0066cc; margin-bottom: 10px; }
         .feature p { color: #666; }
-        .resume-content { text-align: left; margin-top: 20px; color: #333; font-size: 1.1em; }
-        .resume-content ul { list-style: none; padding: 0; margin-left: 20px; }
-        .resume-content li { margin: 12px 0; color: #555; }
-        .resume-content h3 { color: #0066cc; margin-bottom: 10px; }
-        .nav { text-align: center; margin: 20px; }
-        .nav button { margin: 0 10px; padding: 10px 20px; font-size: 1em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        .nav button:hover { background-color: #004a99; }
 
-          /* Call to action */
+        /* Call to action */
         .cta { text-align: center; margin: 40px 0; }
         .cta button { padding: 15px 30px; font-size: 1.2em; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
         .cta button:hover { background-color: #004a99; }
-        
-        footer { text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 50px; }
+
+        /* Footer */
+        footer { display: flex; justify-content: space-between; padding: 20px; background-color: #333; color: white; margin-top: 50px; }
+        footer p { margin: 0; }
+        .about-link { color: #ccc; text-decoration: none; cursor: pointer; }
+        .about-link:hover { color: white; text-decoration: underline; }
+
+        /* Resume section (initially hidden) */
+        #resumeSection { display: none; padding: 20px; color: #333; max-width: 800px; margin: 20px auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        #resumeSection h2 { color: #0066cc; margin-bottom: 15px; }
     </style>
 </head>
 <body>
@@ -43,17 +48,14 @@
         <p>Your Free Global Solution for Remote Management</p>
     </header>
 
-    <div class="nav">
-        <button onclick="showSection('intro')">Home</button>
-        <button onclick="showSection('resume')">Resume</button>
-    </div>
-
-    <div class="container">
-        <section class="intro active">
+    <div class="container" id="mainContent">
+        <section class="intro">
             <h2>Effortless Connections, Anytime, Anywhere</h2>
-            <p>GlobeConnect is designed to help you manage your servers and devices remotely with ease and efficiency. Completely free and made for everyone!</p
-            <section class="features active">
-                <div class="feature">
+            <p>GlobeConnect is designed to help you manage your servers and devices remotely with ease and efficiency. Completely free and made for everyone!</p>
+        </section>
+
+        <section class="features">
+            <div class="feature">
                 <h3>Cross-Platform Access</h3>
                 <p>Access your servers on Linux, Windows, and more with seamless integration.</p>
             </div>
@@ -66,54 +68,55 @@
                 <p>Get started quickly with a user-friendly interface and simple configuration.</p>
             </div>
         </section>
-            <div class="cta" style="text-align: center; margin-top: 20px;">
-                <button onclick="downloadClient()">Download Client Version</button>
-                <button onclick="downloadServer()">Download Server Version</button>
-            </div>
-        </section>
 
-        <section class="resume">
-            <h2>Professional Resume</h2>
-            <div class="resume-content">
-                <h3>Certifications & Technical Skills</h3>
-                <ul>
-                    <li><strong>LPIC1 & LPIC2:</strong> Solid foundation in Linux systems administration, crucial for backend development and server management.</li>
-                    <li><strong>MCSA:</strong> Proficiency in Windows Server environments, ensuring seamless integration with cross-platform projects.</li>
-                    <li><strong>CCNA & Network+:</strong> Strong networking fundamentals to optimize secure and efficient network communication.</li>
-                    <li><strong>MTCNA:</strong> Specialized knowledge in MikroTik routing and network solutions.</li>
-                    <li><strong>Rust:</strong> Mastery of Rust for developing safe and high-performance system applications.</li>
-                    <li><strong>C++:</strong> Expert-level C++ skills for low-level programming and resource-intensive application development.</li>
-                    <li><strong>Web Programming (PHP, JavaScript, HTML, CSS):</strong> Full-stack capabilities to design dynamic, responsive user interfaces and backend functionality.</li>
-                    <li><strong>Virtualization (VMware):</strong> Skilled in VMware solutions, essential for creating, testing, and deploying virtualized environments.</li>
-                    <li><strong>Git:</strong> Version control expertise for collaborative development and code management.</li>
-                    <li><strong>SQL Databases:</strong> Proficiency in SQL (MSSQL & MySQL) to handle large data sets and ensure data integrity in applications.</li>
-                    <li><strong>Security Practices:</strong> Familiarity with security protocols, encryption, and secure coding standards for protecting data and system integrity.</li>
-                </ul>
-                <h3>Project Experience</h3>
-                <ul>
-                    <li><strong>Remote Management Solution:</strong> Developed GlobeConnect, a cross-platform remote management tool with secure, high-speed connections for Windows and Linux servers.</li>
-                    <li><strong>Solo Development Experience:</strong> Designed and implemented projects independently, demonstrating full project lifecycle management skills.</li>
-                </ul>
-            </div>
-        </section>
+        <div class="cta">
+            <button onclick="downloadClient()">Download Client Version</button>
+            <button onclick="downloadServer()">Download Server Version</button>
+        </div>
+    </div>
+
+    <!-- Resume Section -->
+    <div id="resumeSection">
+        <h2>Professional Resume</h2>
+        <p><strong>Certifications & Technical Skills</strong></p>
+        <ul>
+            <li><strong>LPIC1 & LPIC2:</strong> Solid foundation in Linux systems administration, crucial for backend development and server management.</li>
+            <li><strong>MCSA:</strong> Proficiency in Windows Server environments, ensuring seamless integration with cross-platform projects.</li>
+            <li><strong>CCNA & Network+:</strong> Strong networking fundamentals to optimize secure and efficient network communication.</li>
+            <li><strong>MTCNA:</strong> Specialized knowledge in MikroTik routing and network solutions.</li>
+            <li><strong>Rust:</strong> Mastery of Rust for developing safe and high-performance system applications.</li>
+            <li><strong>C++:</strong> Expert-level C++ skills for low-level programming and resource-intensive application development.</li>
+            <li><strong>Web Programming (PHP, JavaScript, HTML, CSS):</strong> Full-stack capabilities to design dynamic, responsive user interfaces and backend functionality.</li>
+            <li><strong>Virtualization (VMware):</strong> Skilled in VMware solutions, essential for creating, testing, and deploying virtualized environments.</li>
+            <li><strong>Git:</strong> Version control expertise for collaborative development and code management.</li>
+            <li><strong>SQL Databases:</strong> Proficiency in SQL (MSSQL & MySQL) to handle large data sets and ensure data integrity in applications.</li>
+            <li><strong>Security Practices:</strong> Familiarity with security protocols, encryption, and secure coding standards for protecting data and system integrity.</li>
+        </ul>
+        <p><strong>Project Experience</strong></p>
+        <ul>
+            <li><strong>Remote Management Solution:</strong> Developed GlobeConnect, a cross-platform remote management tool with secure, high-speed connections for Windows and Linux servers.</li>
+            <li><strong>Solo Development Experience:</strong> Designed and implemented projects independently, demonstrating full project lifecycle management skills.</li>
+        </ul>
     </div>
 
     <footer>
         <p>&copy; 2024 GlobeConnect. All rights reserved.</p>
+        <a class="about-link" onclick="showResume()">About Me</a>
     </footer>
 
     <script>
-        function showSection(section) {
-            document.querySelectorAll('.container > section').forEach(sec => sec.classList.remove('active'));
-            document.querySelector(`.${section}`).classList.add('active');
-        }
-
         function downloadClient() {
-            window.location.href = 'https://your-download-link-for-client';
+            alert("Client version download will be available soon.");
         }
 
         function downloadServer() {
-            window.location.href = 'https://your-download-link-for-server';
+            alert("Server version download will be available soon.");
+        }
+
+        function showResume() {
+            // Hide main content and show resume section
+            document.getElementById("mainContent").style.display = "none";
+            document.getElementById("resumeSection").style.display = "block";
         }
     </script>
 </body>
